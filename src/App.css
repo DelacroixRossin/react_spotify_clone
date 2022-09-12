@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Login{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: black;
+  height: 100vh;
+}
+h1{
+  color :#1db954;
+  font-size: 50px;
+}
+p{
+  color: #bebebe;
+ 
+}
+
+.spotify{
+  padding: 5px 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background-color: #1db954;
+  border: none;
+  border-radius: 20px;
   color: white;
+  text-decoration: none;
+  transition: background-color 1s ease-out 80ms
 }
 
-.App-link {
-  color: #61dafb;
+a{
+  text-decoration: none;
+  color: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.spotify{
+  transition: all .4s ease-in-out; 
 }
+
+.spotify:hover{
+  background-color: #0f5c2a;
+  transform: scale(1.2);
+
+}
+
+.goggle{
+  padding: 5px 20px;
+  /* margin-top: 20px; */
+  background-color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  color: rgb(0, 0, 0);
+  transition: background-color 1s ease-out 80ms
+}
+
+.google:hover{
+  background-color: #bebebe;
+  transform: scale(1.2);
+
+}
+
+
+
+/* .log{
+  display: flex;
+  flex-direction: column;
+}
+
+img{
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+button{
+  width: 300px;
+  align-items: center;
+} */
+

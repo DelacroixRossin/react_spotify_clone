@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from 'react';
+import Spotify from './Spotify'
+import Login from './Login';
 
-function App() {
+
+
+const App = () => {
+ 
+   const [accessToken, setAccessToken] = useState("");
+  const [log, setLog] = useState(false);
+  console.log(accessToken)
+
+  useEffect(() => {
+    const token = window.location.hash.substring(1).split("&")[0].split("=")[1];
+    if (token) {
+      setLog(true);
+    }
+  }, []);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  !log ? <Login /> : <Spotify accessToken={accessToken} setAccessToken={setAccessToken} setLog ={setLog} />
   );
 }
 
