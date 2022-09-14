@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import Spotify from './Spotify'
-import Login from './Login';
+import Spotify from './components/Spotify'
+import Login from './components/Login';
 
 
 

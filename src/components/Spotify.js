@@ -1,4 +1,3 @@
-import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Container,
@@ -13,8 +12,8 @@ import { useState, useEffect } from "react";
 import Login from "./Login.js";
 // import { application } from "express";
 
-const CLIENT_ID = "7f89b2f550be4859985a2771fa5c5fb9";
-const CLIENT_SECRET = "f9249512eccb4e688b268f6316ff18f0";
+const CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID ;
+const CLIENT_SECRET = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
 
 function Spotify({ accessToken, setAccessToken, setLog }) {
   const [searchInput, setSearchInput] = useState("");
@@ -87,12 +86,22 @@ function Spotify({ accessToken, setAccessToken, setLog }) {
   // console.log(artistID)
 
   return (
-    // accessToken==!""?
+    
+
     <div className="App">
-      <Container></Container>
+      <Container>
+
+      {/* <h1>Welcome & Enjoy</h1> */}
+      {/* <img
+className="mt-10 "
+        src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"
+        alt=""
+        
+      /> */}
+      </Container>
 
       <Container>
-        <InputGroup className="mb-3 " size="lg">
+        <InputGroup className="mb-10 " size="lg">
           <FormControl
             placeholder="Search for Artist"
             type="input"
@@ -139,17 +148,22 @@ function Spotify({ accessToken, setAccessToken, setLog }) {
                   frameBorder="0"
                   allowFullScreen=""
                   allow="autoplay; clipboard-write; encrypted-media;
-  fullscreen; picture-in-picture"
+                  fullscreen; picture-in-picture"
                   loading="lazy"
                 ></iframe>
               </Card>
             );
           })}
         </Row>
+        <Col>
+
+        </Col>
       </Container>
+
     </div>
     //  :<Login/>
   );
 }
 
 export default Spotify;
+

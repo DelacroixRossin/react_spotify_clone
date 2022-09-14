@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "../App.css";
 import { FcGoogle } from "react-icons/fc";
 
 const CLIENT_ID = "7f89b2f550be4859985a2771fa5c5fb9";
